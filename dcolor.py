@@ -19,12 +19,12 @@ def get_dominant_color(image_path):
     return red, green, blue
 
 def set_wled_color(red, green, blue):
-    url = "http://WLED_HOST/json/state"
+    url = "http://192.168.178.66/json/state"
     payload = {"on": True, "bri": 255, "transition":5, "seg":[{"col":[[red,green,blue]]}]}
     headers = {'Content-Type': 'application/json'}
     response = requests.put(url, json=payload, headers=headers)
 
 if __name__ == '__main__':
-    image_path = "/tmp/ambient.png"
+    image_path = "./ambient.png"
     red, green, blue = get_dominant_color(image_path)
     set_wled_color(red, green, blue)
