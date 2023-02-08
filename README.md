@@ -5,3 +5,5 @@ Works with macOS. For different operating systems, you might want to use ffmpeg.
 
 You might want to change the display's number in ambient.sh. 1 for main, 2 for secondary display.
 In dcolor.py you need to add your WLEDs hostname or IP.
+
+This won't work with content protecting stuff like netflix, amazon prime video etc... But youtube is fine.
